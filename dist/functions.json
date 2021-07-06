@@ -8,11 +8,13 @@
                 {
                     "description": "First number",
                     "name": "first",
+                    "repeating": true,
                     "type": "number"
                 },
                 {
                     "description": "Second number",
                     "name": "second",
+                    "repeating": true,
                     "type": "number"
                 }
             ],

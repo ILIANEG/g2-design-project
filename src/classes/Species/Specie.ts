@@ -1,12 +1,12 @@
-import ISpecie from "./ISpecie";
+import ISpecie from "../Interfaces & Abstractions/ISpecie";
 
-export default abstract class Specie implements ISpecie{
-    readonly physProps: {
+export default class Specie implements ISpecie{
+    physProps: {
         molarMass: number // [g/mol]
         density: number, // [kg/m^3]
         viscosity: number // [Pa*s]
     }
-    readonly thermCoeff: { A: number, B: number, C: number, D: number, E: number }; // heat capacity coefficients
+    thermCoeff: { A: number, B: number, C: number, D: number, E: number }; // heat capacity coefficients
 
    
     constructor(physProps: [number, number, number], thermoCoef: [number, number, number, number, number]) {
@@ -41,10 +41,11 @@ export default abstract class Specie implements ISpecie{
      * @param temperature [K]
      * @returns Cp [J/mol K] of the specie at given temperature
      */
-    integrateCp(temperature: number, temperatureR: number) {
+    integrateCp(temperatureR: number, temperature: number) {
         let t = temperature / 1000;
         let tr = temperatureR / 1000;
-        //return this.thermCoeff.A * (t**2 - ) + this.thermCoeff.B * t**2 / 2 + this.thermCoeff.C * t**3 / 3 +
-        //this.thermCoeff.D * t**4 / 4 - this.thermCoeff.E / t
+        return this.thermCoeff.A*(t - tr) + this.thermCoeff.B*(t**2/2 - tr**2/2) +
+            this.thermCoeff.C*(t**3/3 - tr**3/3) + this.thermCoeff.D*(t**4/4 - tr**4/4) +
+            this.thermCoeff.E*(-1/t + 1/tr);
     }
 }

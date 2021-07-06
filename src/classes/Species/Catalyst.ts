@@ -1,6 +1,6 @@
-import ICatalyst from "./Interfaces & Abstractions/ICatalyst";
-import ISpecie from "./Interfaces & Abstractions/ISpecie";
-import Specie from "./Interfaces & Abstractions/Specie.abstract";
+import ICatalyst from "../Interfaces & Abstractions/ICatalyst";
+import ISpecie from "../Interfaces & Abstractions/ISpecie";
+import Specie from "./Specie";
 
 export default class Catalyst extends Specie implements ISpecie, ICatalyst {
     k: Array<number>;

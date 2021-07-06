@@ -1,6 +1,6 @@
-import ISpecie from "./Interfaces & Abstractions/ISpecie";
-import IVolatile from "./Interfaces & Abstractions/IVolatile";
-import Specie from "./Interfaces & Abstractions/Specie.abstract";
+import ISpecie from "../Interfaces & Abstractions/ISpecie";
+import IVolatile from "../Interfaces & Abstractions/IVolatile";
+import Specie from "./Specie";
 import { evaluate } from "mathjs";
 
 export default class VolatileInertSpecie extends Specie implements ISpecie, IVolatile {

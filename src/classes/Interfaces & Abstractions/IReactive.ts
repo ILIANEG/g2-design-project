@@ -1,3 +1,4 @@
 export default interface IReactive {
-    readonly dHf: number;
+    dHf: number;
+    Tr: number;
 }

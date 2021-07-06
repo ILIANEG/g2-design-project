@@ -7,8 +7,8 @@
  */
 /* global clearInterval, console, setInterval */
 
-export function add(first: number, second: number): number {
-  return first + second;
+export function add(first: number[], second: number[]): number {
+  return first[0][0] * second[0][0];
 }
 
 /**
