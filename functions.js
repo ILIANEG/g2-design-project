@@ -111,7 +111,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = void 0;
 
 function add(first, second) {
-  return first + second;
+  return first[0][0] * second[0][0];
 }
 
 exports.add = add;
