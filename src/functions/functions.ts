@@ -1,4 +1,14 @@
-﻿/**
+﻿import { number, range } from "mathjs";
+
+export function addEach(range1: number[][], range2: number[][]) {
+  let sum = 0;
+  for (let i = 0; i < range1[0].length; i++) {
+    sum = sum + range1[0][i] * range2[0][i]
+  }
+  return sum;
+}
+
+/**
  * Adds two numbers.
  * @customfunction
  * @param first First number
@@ -7,8 +17,8 @@
  */
 /* global clearInterval, console, setInterval */
 
-export function add(first: any[][]): any{
-  return first[0][0];
+export function add(first: number, second: number): number {
+  return first * second;
 }
 
 /**

@@ -7,12 +7,18 @@
             "parameters": [
                 {
                     "description": "First number",
-                    "dimensionality": "matrix",
                     "name": "first",
-                    "type": "any"
+                    "type": "number"
+                },
+                {
+                    "description": "Second number",
+                    "name": "second",
+                    "type": "number"
                 }
             ],
-            "result": {}
+            "result": {
+                "type": "number"
+            }
         },
         {
             "description": "Displays the current time once a second.",
