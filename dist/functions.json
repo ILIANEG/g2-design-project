@@ -15,7 +15,9 @@
                     "type": "number"
                 }
             ],
-            "result": {}
+            "result": {
+                "type": "number"
+            }
         },
         {
             "description": "Adds two numbers.",

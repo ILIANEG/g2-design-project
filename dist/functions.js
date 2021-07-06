@@ -99,7 +99,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = exports.addEach = void 0;
+exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = void 0;
 /**
  * @customfunction
  * @param range1
@@ -116,8 +116,6 @@ function addEach(range1, range2) {
 
   return sum;
 }
-
-exports.addEach = addEach;
 /**
  * Adds two numbers.
  * @customfunction
@@ -127,6 +125,7 @@ exports.addEach = addEach;
  */
 
 /* global clearInterval, console, setInterval */
+
 
 function add(first, second) {
   return first * second;
