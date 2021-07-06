@@ -10,12 +10,6 @@
                     "dimensionality": "matrix",
                     "name": "first",
                     "type": "number"
-                },
-                {
-                    "description": "Second number",
-                    "dimensionality": "matrix",
-                    "name": "second",
-                    "type": "number"
                 }
             ],
             "result": {
