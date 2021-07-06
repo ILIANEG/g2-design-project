@@ -9,12 +9,10 @@
                     "description": "First number",
                     "dimensionality": "matrix",
                     "name": "first",
-                    "type": "number"
+                    "type": "any"
                 }
             ],
-            "result": {
-                "type": "number"
-            }
+            "result": {}
         },
         {
             "description": "Displays the current time once a second.",
