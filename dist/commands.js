@@ -130,7 +130,7 @@ module.exports = g;
  */
 
 /* global global, Office, self, window */
-Office.onReady(function () {// If needed, Office.js is ready to be called
+Office.onReady(() => {// If needed, Office.js is ready to be called
 });
 /**
  * Shows a notification when the add-in command is executed.
@@ -147,7 +147,7 @@ function getGlobal() {
   return typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : undefined;
 }
 
-var g = getGlobal(); // the add-in command functions need to be available in global scope
+const g = getGlobal(); // the add-in command functions need to be available in global scope
 
 g.action = action;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
