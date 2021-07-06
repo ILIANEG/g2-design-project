@@ -5,7 +5,7 @@
  * @param range2 
  * @returns 
  */
-function addEach(range1: number[][], range2: number[][]): number {
+export function addEach(range1: number[][], range2: number[][]): number {
   let sum = 0;
   for (let i = 0; i < range1[0].length; i++) {
     sum = sum + range1[0][i] * range2[0][i]
