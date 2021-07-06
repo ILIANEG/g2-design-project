@@ -7,14 +7,14 @@
             "parameters": [
                 {
                     "description": "First number",
+                    "dimensionality": "matrix",
                     "name": "first",
-                    "repeating": true,
                     "type": "number"
                 },
                 {
                     "description": "Second number",
+                    "dimensionality": "matrix",
                     "name": "second",
-                    "repeating": true,
                     "type": "number"
                 }
             ],
