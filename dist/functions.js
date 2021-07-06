@@ -100,6 +100,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = exports.addEach = void 0;
+/**
+ * @customfunction
+ * @param range1
+ * @param range2
+ * @returns
+ */
 
 function addEach(range1, range2) {
   var sum = 0;
@@ -188,6 +194,7 @@ function logMessage(message) {
 }
 
 exports.logMessage = logMessage;
+CustomFunctions.associate("ADDEACH", addEach);
 CustomFunctions.associate("ADD", add);
 CustomFunctions.associate("CLOCK", clock);
 CustomFunctions.associate("INCREMENT", increment);
