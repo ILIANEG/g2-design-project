@@ -9,13 +9,13 @@
                     "description": "First number",
                     "dimensionality": "matrix",
                     "name": "first",
-                    "type": "number"
+                    "type": "any"
                 },
                 {
                     "description": "Second number",
                     "dimensionality": "matrix",
                     "name": "second",
-                    "type": "number"
+                    "type": "any"
                 }
             ],
             "result": {
