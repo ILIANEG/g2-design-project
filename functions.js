@@ -95,6 +95,23 @@
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = exports.addEach = void 0;
+
+function addEach(range1, range2) {
+  var sum = 0;
+
+  for (var i = 0; i < range1[0].length; i++) {
+    sum = sum + range1[0][i] * range2[0][i];
+  }
+
+  return sum;
+}
+
+exports.addEach = addEach;
 /**
  * Adds two numbers.
  * @customfunction
@@ -105,13 +122,8 @@
 
 /* global clearInterval, console, setInterval */
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = void 0;
-
-function add(first) {
-  return first[0][0];
+function add(first, second) {
+  return first * second;
 }
 
 exports.add = add;
