@@ -101,6 +101,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = void 0;
 /**
+ *
  * @customfunction
  * @param range1
  * @param range2

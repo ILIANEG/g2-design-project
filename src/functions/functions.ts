@@ -1,6 +1,5 @@
-﻿import { number, range } from "mathjs";
-
-/**
+﻿/**
+ * 
  * @customfunction
  * @param range1 
  * @param range2 
