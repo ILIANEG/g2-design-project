@@ -90,11 +90,16 @@
 /*!************************************!*\
   !*** ./src/functions/functions.ts ***!
   \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: add, clock, currentTime, increment, logMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return add; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clock", function() { return clock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "currentTime", function() { return currentTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "increment", function() { return increment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logMessage", function() { return logMessage; });
 /**
  * Adds two numbers.
  * @customfunction
@@ -104,17 +109,9 @@
  */
 
 /* global clearInterval, console, setInterval */
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.logMessage = exports.increment = exports.currentTime = exports.clock = exports.add = void 0;
-
 function add(first, second) {
   return first + second;
 }
-
-exports.add = add;
 /**
  * Displays the current time once a second.
  * @customfunction
@@ -122,17 +119,15 @@ exports.add = add;
  */
 
 function clock(invocation) {
-  var timer = setInterval(function () {
-    var time = currentTime();
+  const timer = setInterval(() => {
+    const time = currentTime();
     invocation.setResult(time);
   }, 1000);
 
-  invocation.onCanceled = function () {
+  invocation.onCanceled = () => {
     clearInterval(timer);
   };
 }
-
-exports.clock = clock;
 /**
  * Returns the current time.
  * @returns String with the current time formatted for the current locale.
@@ -141,8 +136,6 @@ exports.clock = clock;
 function currentTime() {
   return new Date().toLocaleTimeString();
 }
-
-exports.currentTime = currentTime;
 /**
  * Increments a value once a second.
  * @customfunction
@@ -151,18 +144,16 @@ exports.currentTime = currentTime;
  */
 
 function increment(incrementBy, invocation) {
-  var result = 0;
-  var timer = setInterval(function () {
+  let result = 0;
+  const timer = setInterval(() => {
     result += incrementBy;
     invocation.setResult(result);
   }, 1000);
 
-  invocation.onCanceled = function () {
+  invocation.onCanceled = () => {
     clearInterval(timer);
   };
 }
-
-exports.increment = increment;
 /**
  * Writes a message to console.log().
  * @customfunction LOG
@@ -174,8 +165,6 @@ function logMessage(message) {
   console.log(message);
   return message;
 }
-
-exports.logMessage = logMessage;
 CustomFunctions.associate("ADD", add);
 CustomFunctions.associate("CLOCK", clock);
 CustomFunctions.associate("INCREMENT", increment);
