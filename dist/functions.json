@@ -5,13 +5,13 @@
             "name": "ADDEACH",
             "parameters": [
                 {
-                    "dimensionality": "matrix",
                     "name": "range1",
+                    "repeating": true,
                     "type": "number"
                 },
                 {
-                    "dimensionality": "matrix",
                     "name": "range2",
+                    "repeating": true,
                     "type": "number"
                 }
             ],
