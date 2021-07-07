@@ -111,8 +111,8 @@ exports.logMessage = exports.increment = exports.currentTime = exports.clock = e
 function addEach(range1, range2) {
   var sum = 0;
 
-  for (var i = 0; i < range1[0].length; i++) {
-    sum = sum + range1[0][i] * range2[0][i];
+  for (var i = 0; i < range1.length; i++) {
+    sum = sum + range1[i] * range2[i];
   }
 
   return sum;
